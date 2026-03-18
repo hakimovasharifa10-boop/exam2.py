@@ -81,17 +81,18 @@
 # is_prime(10) -> False
 
 
-
-
 # def is_prime(n):
-#     if n % 2 == 0:
-#         return 'False'
-#     else:
-#         return 'True'
-    
-# print(is_prime(7))
-# print(is_prime(10))
+#     if n < 2:
+#         return False
+#     for i in range(2, n):
+#         if n % i == 0:
+#             return False 
+#         else:
+#            return True
 
+
+# print(is_prime(7))  
+# print(is_prime(10)) 
 
 
 
@@ -184,3 +185,54 @@
     
 # n = int(input())
 # print(fact(n))
+
+
+
+# 6. Рекурсивное суммирование элементов списка / Recursive Sum of List / Ҳисоби рекурсивии ҷамъи рӯйхат
+# Создайте функцию, которая возвращает сумму всех элементов списка рекурсивно.
+# Create a function that returns the sum of all elements of a list recursively.
+# Функсияе созед, ки ҷамъи ҳамаи элементҳои рӯйхатро рекурсив баргардонад.
+# Пример / Example / Намуна:
+# sum_list([1,2,3,4]) -> 10
+
+
+
+
+# def sum_list(items):
+#     if not items:
+#         return 0
+    
+#     return items[0] + sum_list(items[1:])
+
+# numbers = [1, 2, 3, 4]
+# result = sum_list(numbers)
+# print(f"All sum: {result}") 
+
+
+
+
+# 9. Сложное замыкание с накоплением / Advanced Accumulator Closure / Замимаи пешрафта бо ҷамъкунӣ
+# Создайте функцию, которая возвращает другую функцию, добавляющую переданное число к внутреннему счетчику и возвращающую текущее значение счетчика.
+# Create a function that returns another function that adds a given number to an internal counter and returns the current counter value.
+# Функсияе созед, ки функсияи дигарро баргардонад, ки адади дода-шударо ба ҳисобгари дохилӣ илова кунад ва арзиши ҳозираи ҳисобгарро баргардонад.
+# Пример / Example / Намуна:
+# count = accumulator()
+# count(5) -> 5
+# count(3) -> 8
+# count(10) -> 18
+
+
+# def accumulator():
+#     total = 0
+#     def add(n):
+#         nonlocal total
+#         total += n
+#         return total
+#     return add
+
+# count = accumulator()
+
+
+# print(count(5))   
+# print(count(3))   
+# print(count(10))  
